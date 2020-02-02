@@ -1,0 +1,28 @@
+@import url(./__title/title.css);
+@import url(./__container/container.css);
+
+.diagram {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 7.3%;
+    padding-right: 7.3%;
+    background: #F5F6F7;
+}
+
+@media (max-width: 1439px) and (min-width: 1200px) {
+    .diagram{  
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-right: 6.3%;
+        padding-left: 6.3%; 
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .diagram {  
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-right: 5.4%;
+        padding-left: 5.4%;
+    }
+}

@@ -1,0 +1,20 @@
+@import url(./__percent/percent.css);
+@import url(./_days/monday.css);
+@import url(./_days/tuesday.css);
+@import url(./_days/wensday.css);
+@import url(./_days/thursday.css);
+@import url(./_days/friday.css);
+@import url(./_days/saturday.css);
+@import url(./_days/sunday.css);
+
+.diagram__ray {
+    background-color: #2F71E5;
+    /* width: calc(100% - 6px); */
+    height: 24px;
+    margin-bottom: 56px;
+    display: flex;
+}
+/* 
+.diagram__ray:last-child{
+    margin-bottom: 0px;
+} */

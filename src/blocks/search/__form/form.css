@@ -1,0 +1,48 @@
+@import url(./__button/button.css);
+@import url(./__input/input.css);
+
+.search__form {
+    width: calc(100% - 57.8vw);
+    margin-left: 28.9vw;
+    align-self: flex-start;
+    display: flex;
+    background: #FFFFFF;
+    border-radius: 100px;
+    height: 64px;
+}
+
+@media (max-width: 1439px) and (min-width: 1200px) {
+    .search__form { 
+        width: calc(100% - 51vw);
+        margin-left: 25.5vw;
+        height: 60px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .search__form {  
+        width: calc(100% - 39.6vw);
+        margin-left: 20.8vw;
+        height: 56px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 650px) {
+    .search__form {  
+        width: calc(100% - 39.6vw);
+        margin-left: 20.8vw;
+        height: 56px;
+    }
+}
+
+@media (max-width: 649px) and (min-width: 320px) {
+    .search__form { 
+        width: 288px;
+        flex-direction: column;
+        background-color: transparent;
+        align-self: center;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+

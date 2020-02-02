@@ -1,0 +1,15 @@
+.toClient__paragraph {
+    margin-top: 24px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+}
+
+@media (max-width: 649px) and (min-width: 320px) {
+    .toClient__paragraph {  
+        margin-top: 16px;
+    }
+}

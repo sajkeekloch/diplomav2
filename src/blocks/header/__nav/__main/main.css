@@ -1,0 +1,21 @@
+@import url(./_aboutPage/aboutPage.css);
+@import url(./_mainPage/mainPage.css);
+
+.header__main {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    padding-bottom: 1.8vw;
+    margin-right: 2.4vw;
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+    .header__main {   
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        /* margin-right: 34px;  */
+    }
+}

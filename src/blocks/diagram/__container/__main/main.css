@@ -1,0 +1,8 @@
+@import url(./__dates/dates.css);
+@import url(./__rays/rays.css);
+
+.diagram__main {
+    padding-top: 8px;
+    display: flex;
+    flex-direction: row;
+}

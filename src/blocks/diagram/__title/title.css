@@ -1,0 +1,27 @@
+.diagram__title {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    color: #1A1B22;
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+@media (max-width: 1439px) and (min-width: 1200px) {
+    .diagram__title{  
+        font-size: 33px;
+        line-height: 38px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .diagram__title {  
+        font-size: 26px;
+        line-height: 30px;
+    }
+}

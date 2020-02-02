@@ -1,0 +1,46 @@
+@import url(./__cover/cover.css);
+@import url(./__date/date.css);
+@import url(./__text/text.css);
+@import url(./__title/title.css);
+@import url(./__source/source.css);
+
+.results__card {
+    width: calc(100%/3 - 0.7vw);
+    height: 576px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    border-radius: 15px;
+}
+
+.results__card:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1439px) and (min-width: 1200px) {
+    .results__card {
+        height: 500px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .results__card {
+        height: 420px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 650px) {
+    .results__card { 
+        width: calc(100%/2 - 1vw);
+    }
+}
+
+@media (max-width: 649px) and (min-width: 320px) {
+    .results__card{ 
+        width: 90vw;
+        max-width: 500px;
+    }
+}
+

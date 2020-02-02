@@ -1,0 +1,19 @@
+@import url(./__card/card.css);
+
+.results__container {
+    margin-top: 64px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .results__container {
+        max-width: 925px;
+    }
+}
+

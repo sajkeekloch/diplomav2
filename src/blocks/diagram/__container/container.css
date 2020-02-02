@@ -1,0 +1,7 @@
+@import url(./__specs/specs.css);
+@import url(./__quarters/quarters.css);
+@import url(./__main/main.css);
+
+.diagram__container {
+    padding-top: 48px;
+}

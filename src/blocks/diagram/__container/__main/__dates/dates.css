@@ -1,0 +1,14 @@
+@import url(./__date/date.css);
+
+.diagram__dates {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #1A1B22;
+    width: 104px;
+    padding-left: 9px;
+}

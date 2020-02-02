@@ -1,0 +1,5 @@
+@import url(./__paragraph/paragraph.css);
+
+.toClient__text {
+    max-width: 815px;
+}

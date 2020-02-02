@@ -1,0 +1,27 @@
+.request__nav {
+    padding-bottom: 80px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+}
+
+@media (max-width: 1439px) and (min-width: 1200px) {
+    .request__nav{  
+        padding-bottom: 72px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .request__nav {  
+        padding-bottom: 64px;
+    }
+}
+
+@media (max-width: 649px) and (min-width: 320px) {
+    .request__nav {
+        display: none;
+    }
+}

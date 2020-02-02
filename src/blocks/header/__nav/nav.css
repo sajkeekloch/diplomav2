@@ -1,0 +1,9 @@
+@import url(./__about/about.css);
+@import url(./__main/main.css);
+
+.header__nav {
+    max-width: calc(88px + 34px + 69px);
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-end;
+}

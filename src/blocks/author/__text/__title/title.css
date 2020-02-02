@@ -1,0 +1,28 @@
+.author__title {
+    margin-top: 9vw;
+    margin-bottom: 1.7vw;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    color: #1A1B22;
+}
+
+@media (max-width: 1439px) and (min-width: 1200px) {
+    .author__title {
+        margin-top: 7vw;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .author__title {
+        margin-top: 5vw;
+    }
+}
+
+@media (max-width: 649px) and (min-width: 320px) {
+    .author__title {
+        margin-top: 0;
+    }
+}

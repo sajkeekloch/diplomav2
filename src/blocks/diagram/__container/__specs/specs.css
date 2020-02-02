@@ -1,0 +1,10 @@
+@import url(./__baseDate/baseDate.css);
+@import url(./__measure/measure.css);
+
+.diagram__specs {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #1A1B22;
+    max-height: 20px;
+    padding-bottom: 24px;
+}

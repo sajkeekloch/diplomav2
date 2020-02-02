@@ -1,0 +1,35 @@
+.tech__title {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    color: #1A1B22;
+    max-width: 40%;
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .tech__title {  
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 650px) {
+    .tech__title { 
+        max-width: none;
+    }
+}
+
+@media (max-width: 649px) and (min-width: 320px) {
+    .tech__title { 
+        max-width: none;
+        width: 90%; 
+        font-size: 30px;
+        line-height: 40px;
+    }
+}

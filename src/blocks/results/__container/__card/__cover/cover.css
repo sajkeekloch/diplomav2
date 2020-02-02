@@ -1,0 +1,25 @@
+.card__cover {
+    background-size: contain;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    /* height: calc((100% - 228.2px)*0.78); */
+    max-height: 45%;
+}
+
+@media (max-width: 1439px) and (min-width: 1200px) {
+    .card__cover {
+        max-height: 40%;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .card__cover {
+        max-height: 35%;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 650px) {
+    .card__cover {
+        max-height: 35%;
+    }
+}

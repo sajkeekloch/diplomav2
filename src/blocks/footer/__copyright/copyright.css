@@ -1,0 +1,31 @@
+.footer__copyright {   
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 22px;
+    color: #B6BCBF;
+    width: 20%;
+}
+
+@media (max-width: 1439px) and (min-width: 1200px) {
+    .footer__copyright {
+        width: 20%;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .footer__copyright {
+        width: 20%; 
+    }
+}
+
+@media (max-width: 759px) and (min-width: 650px) {
+    .footer__copyright {
+        width: 30%;
+    }
+}
+
+@media (max-width: 649px) and (min-width: 320px) {
+    .footer__copyright {
+        width: 100%;
+    }
+}
