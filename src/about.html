@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>about
   </title>
-  <link rel="stylesheet" href="./vendor/normalize.css">
+  <link rel="icon" href="<%=require('./images/favicon.svg')%>">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
 </head>
 <body class="body">
@@ -97,7 +97,7 @@
       <h2 class="swiper__title">
         История коммитов из GitHub
       </h2>
-      <a href="#" class="swiper__href">
+      <a href="https://github.com/sajkeekloch/diplomav2/commits" class="swiper__href">
         Открыть в  Github 
         <img src="<%=require('./images/arrow.svg')%>">
       </a>
@@ -182,7 +182,7 @@
     <div class="footer__link">
       <a href="./index.html" class="footer__link_main link">Главная</a>
       <a href="about.html" class="footer__link_about link">О проекте</a>
-      <a href="analytics.html"class="footer__link_yandex link">Яндекс.Практикум</a>
+      <a href="https://praktikum.yandex.ru/" class="footer__link_yandex link">Яндекс.Практикум</a>
     </div>
     <div class="footer__icon">
       <a class="footer__icon_git" href="https://github.com/sajkeekloch">
@@ -197,6 +197,3 @@
   <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
 </body>
 </html>
-
-
-

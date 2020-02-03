@@ -18,10 +18,10 @@ module.exports = {
     },
     module: {
         rules: [
-            { // тут описываются правила
-                test: /\.js$/, // регулярное выражение, которое ищет все js файлы
-                use: { loader: "babel-loader" }, // весь JS обрабатывается пакетом babel-loader
-                exclude: /node_modules/ // исключает папку node_modules
+            { 
+                test: /\.js$/, 
+                use: { loader: "babel-loader" }, 
+                exclude: /node_modules/ 
             },
             {
                 test: /\.(woff|woff2|ttf|otf|png|jpe?g|gif|svg)$/i,
@@ -42,8 +42,8 @@ module.exports = {
                 ]
             },
         {
-            test: /\.css$/, // применять это правило только к CSS-файлам
-            use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader'] // к этим файлам нужно применить пакеты, которые мы уже установили
+            test: /\.css$/,
+            use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader'] 
         }
         ]
     },

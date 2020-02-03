@@ -14,6 +14,13 @@
     margin-top: -88px;
 } 
 
+@media (min-width: 1560px) {
+    .search { 
+        margin-top: -100px;
+        height: 46vw;
+    }
+}
+
 @media (max-width: 1439px) and (min-width: 1200px) {
     .search { 
         margin-top: -88px;

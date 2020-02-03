@@ -1,5 +1,6 @@
 @import url(./_aboutPage/aboutPage.css);
 @import url(./_mainPage/mainPage.css);
+@import url(./_analyticsPage/analyticsPage.css);
 
 .header__main {
     font-family: Roboto;
@@ -16,6 +17,5 @@
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
-        /* margin-right: 34px;  */
     }
 }

@@ -6,15 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>about
   </title>
-  <link rel="stylesheet" href="./vendor/normalize.css">
+  <link rel="icon" href="<%=require('./images/favicon.svg')%>">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
 </head>
 <body class="body">
     <header class="header">
       <div class="header__logo header__logo_aboutPage">NewsAnalyzer</div>
       <div class="header__nav">
-        <a class="link header__main header__main_aboutPade" href="./index.html">Главная</a>
-        <a class="link header__about header__about_aboutPage" href="#">О проекте</a>
+        <a class="link header__main header__main_analyticsPage" href="./index.html">Главная</a>
+        <a class="link header__about header__about_analyticsPage" href="./about.html">О проекте</a>
       </div>
   </header>
 
@@ -136,7 +136,7 @@
     <div class="footer__link">
       <a href="./index.html" class="footer__link_main link">Главная</a>
       <a href="about.html" class="footer__link_about link">О проекте</a>
-      <a href="analytics.html"class="footer__link_yandex link">Яндекс.Практикум</a>
+      <a href="https://praktikum.yandex.ru/"class="footer__link_yandex link">Яндекс.Практикум</a>
     </div>
     <div class="footer__icon">
       <a class="footer__icon_git" href="https://github.com/sajkeekloch">

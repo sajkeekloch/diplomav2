@@ -1,8 +1,8 @@
 @import url(./_aboutPage/aboutPage.css);
 @import url(./_mainPage/mainPage.css);
+@import url(./_analyticsPage/analyticsPage.css);
 
 .header__about {
-    /* width: 86px; */
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
