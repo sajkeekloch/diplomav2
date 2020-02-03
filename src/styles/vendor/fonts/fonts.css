@@ -14,3 +14,10 @@
     src: url(./robotoslab-regular-webfont.woff); 
     font-family: 'Roboto Slab';
 }
+
+@font-face {
+    src: url(./SourceSansPro-Regular.woff);
+    font-family: 'Source Sans Pro';
+    font-weight: normal;
+    font-style: normal;
+}
