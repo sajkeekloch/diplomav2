@@ -15,6 +15,7 @@
 @media (max-width: 1439px) and (min-width: 1200px) {
     .footer__link {
         width: 50%;
+        font-family: 'Roboto';
     }
 }
 
