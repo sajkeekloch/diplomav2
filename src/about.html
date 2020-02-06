@@ -7,17 +7,20 @@
   <meta name="description" content="diploma">
   <meta name="author" content="Klochkov Aleksandr">
   <title>about</title>
-  <link rel="icon" href="<%=require('./images/favicon.svg')%>">
+  <link rel="icon" href="<%=require('./images/favicon.png')%>">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
 </head>
 <body class="body">
-
     <header class="header">
       <div class="header__logo header__logo_aboutPage">NewsAnalyzer</div>
-      <div class="header__nav">
-        <a class="link header__main header__main_aboutPade" href="./index.html">Главная</a>
-        <a class="link header__about header__about_aboutPage" href="#">О проекте</a>
-      </div>
+      <ul class="header__nav">
+        <li>
+          <a class="header__main header__main_aboutPade link" href="./index.html">Главная</a>
+        </li>
+        <li>
+          <a class="header__about header__about_aboutPage link" href="#">О проекте</a>
+        </li>
+      </ul>
   </header>
 
   <div class="toClient">
@@ -53,35 +56,35 @@
         <h3 class="container__title">
           HTML
         </h3>
-        <img class="container__image" src="<%=require('./images/HTML5.svg')%>">
+        <img class="container__image" src="<%=require('./images/HTML5.svg')%>" alt="html5Icon">
       </div>
 
       <div class="tech__item">
         <h3 class="container__title">
           CSS
         </h3>
-        <img class="container__image" src="<%=require('./images/CSS3.svg')%>">
+        <img class="container__image" src="<%=require('./images/CSS3.svg')%>" alt="css3Icon">
       </div>
 
       <div class="tech__item">
         <h3 class="container__title">
           Java Script
         </h3>
-        <img class="container__image" src="<%=require('./images/JS.svg')%>">
+        <img class="container__image" src="<%=require('./images/JS.svg')%>" alt="jsIcon">
       </div>
 
       <div class="tech__item">
         <h3 class="container__title">
           Webpack
         </h3>
-        <img class="container__image" src="<%=require('./images/webpack.svg')%>">
+        <img class="container__image" src="<%=require('./images/webpack.svg')%>" alt="webpackIcon">
       </div>
 
     </div>
   </div>
 
   <div class="author">
-    <img class="author__photo" src="<%=require('./images/author__photo.jpg')%>" alt="Autor's photo">
+    <img class="author__photo" src="<%=require('./images/author__photo.jpg')%>" alt="AutorPhoto">
     <div class="author__text">
       <h2 class="author__title">
         Клочков Александр
@@ -100,7 +103,7 @@
       </h2>
       <a href="https://github.com/sajkeekloch/diplomav2/commits" class="swiper__href">
         Открыть в  Github 
-        <img src="<%=require('./images/arrow.svg')%>">
+        <img src="<%=require('./images/arrow.svg')%>" alt="arrow">
       </a>
     </div>
 
@@ -180,11 +183,17 @@
 
   <div class="footer">
     <div class="footer__copyright">© 2019  Supersite</div>
-    <div class="footer__link">
-      <a href="./index.html" class="footer__link_main link">Главная</a>
-      <a href="about.html" class="footer__link_about link">О проекте</a>
-      <a href="https://praktikum.yandex.ru/" class="footer__link_yandex link">Яндекс.Практикум</a>
-    </div>
+    <ul class="footer__link">
+      <li>
+        <a href="./index.html" class="footer__link_main link">Главная</a>
+      </li>
+      <li>
+        <a href="about.html" class="footer__link_about link">О проекте</a>
+      </li>
+      <li>
+        <a href="https://praktikum.yandex.ru/" class="footer__link_yandex link">Яндекс.Практикум</a>
+      </li>
+    </ul>
     <div class="footer__icon">
       <a class="footer__icon_git" href="https://github.com/sajkeekloch">
         <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">

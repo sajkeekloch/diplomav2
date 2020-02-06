@@ -14,7 +14,7 @@ module.exports = {
         },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js'
+        filename: 'scripts/[name].[chunkhash].js'
     },
     module: {
         rules: [
@@ -24,12 +24,30 @@ module.exports = {
                 exclude: /node_modules/ 
             },
             {
-                test: /\.(woff|woff2|ttf|otf|png|jpe?g|gif|svg)$/i,
+                test: /\.(woff|woff2|ttf|otf)$/i,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[name].[ext]'
+                            name: 'fonts/[name].[ext]'
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true,
+                            disable: true,
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'images/[name].[ext]'
                         }
                     },
                     {
@@ -56,7 +74,7 @@ module.exports = {
         overlay: true
     },
     plugins: [
-        new MiniCssExtractPlugin({ filename: 'style.[contenthash].css' }),
+        new MiniCssExtractPlugin({ filename: 'slyles/style.[contenthash].css' }),
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,

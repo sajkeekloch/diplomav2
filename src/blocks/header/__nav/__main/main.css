@@ -3,12 +3,12 @@
 @import url(./_analyticsPage/analyticsPage.css);
 
 .header__main {
-    font-family: Roboto;
+    font-family: Roboto, Helvetica, Calibri;
     font-style: normal;
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
-    padding-bottom: 1.8vw;
+    padding-bottom: 1.5vw;
     margin-right: 2.4vw;
 }
 
