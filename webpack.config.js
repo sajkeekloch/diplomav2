@@ -14,7 +14,7 @@ module.exports = {
         },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '.scripts/[name].[chunkhash].js'
+        filename: 'scripts/[name].[chunkhash].js'
     },
     module: {
         rules: [
@@ -29,7 +29,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '.images/[name].[ext]'
+                            name: './images/[name].[ext]'
                         }
                     },
                     {
@@ -47,7 +47,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '.fonts/[name].[ext]'
+                            name: './fonts/[name].[ext]'
                         }
                     },
                     {
@@ -74,7 +74,7 @@ module.exports = {
         overlay: true
     },
     plugins: [
-        new MiniCssExtractPlugin({ filename: '.styles/style.[contenthash].css' }),
+        new MiniCssExtractPlugin({ filename: 'styles/style.[contenthash].css' }),
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
