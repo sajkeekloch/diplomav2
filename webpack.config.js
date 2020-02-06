@@ -24,12 +24,30 @@ module.exports = {
                 exclude: /node_modules/ 
             },
             {
-                test: /\.(woff|woff2|ttf|otf|png|jpe?g|gif|svg)$/i,
+                test: /\.(png|jpe?g|gif|svg)$/i,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[name].[ext]'
+                            name: 'images/[name].[ext]'
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true,
+                            disable: true,
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(woff|woff2|ttf|otf)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'fonts/[name].[ext]'
                         }
                     },
                     {
@@ -56,7 +74,7 @@ module.exports = {
         overlay: true
     },
     plugins: [
-        new MiniCssExtractPlugin({ filename: 'slyles/style.[contenthash].css' }),
+        new MiniCssExtractPlugin({ filename: 'styles/style.[contenthash].css' }),
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
