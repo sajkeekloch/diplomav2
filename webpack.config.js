@@ -14,7 +14,8 @@ module.exports = {
         },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'scripts/[name].[chunkhash].js'
+        filename: 'scripts/[name].[chunkhash].js',
+        publicPath: '../'
     },
     module: {
         rules: [
@@ -59,10 +60,15 @@ module.exports = {
                     }
                 ]
             },
-        {
-            test: /\.css$/,
-            use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader'] 
-        }
+            {
+                test: /\.css$/,
+                use: 
+                [
+                (isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 
+                'css-loader', 
+                'postcss-loader'] 
+            }
+            
         ]
     },
     resolve: {
@@ -74,27 +80,29 @@ module.exports = {
         overlay: true
     },
     plugins: [
-        new MiniCssExtractPlugin({ filename: 'styles/style.[contenthash].css' }),
+        new MiniCssExtractPlugin({ 
+            filename: 'styles/style.[contenthash].css',
+     }),
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
             chunks: ['main'],
             template: './src/index.html',
-            filename: 'index.html'
+            filename: 'pages/index.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
             chunks: ['about'],
             template: './src/about.html',
-            filename: 'about.html'
+            filename: 'pages/about.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
             chunks: ['analytics'],
             template: './src/analytics.html',
-            filename: 'analytics.html'
+            filename: 'pages/analytics.html'
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
