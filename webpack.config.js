@@ -14,8 +14,7 @@ module.exports = {
         },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'scripts/[name].[chunkhash].js',
-        publicPath: '../'
+        filename: 'scripts/[name].[chunkhash].js'
     },
     module: {
         rules: [
@@ -30,7 +29,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: 'images/[name].[ext]'
+                            name: 'images/[name].[ext]',
                         }
                     },
                     {
@@ -48,7 +47,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: 'fonts/[name].[ext]'
+                            name: 'fonts/[name].[ext]',
                         }
                     },
                     {
@@ -62,10 +61,14 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: 
-                [
-                (isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 
-                'css-loader', 
+                use: [
+                    {
+                      loader: MiniCssExtractPlugin.loader,
+                      options: {
+                        publicPath: '../',
+                      },
+                    },
+                    'css-loader',
                 'postcss-loader'] 
             }
             
@@ -88,21 +91,21 @@ module.exports = {
             hash: true,
             chunks: ['main'],
             template: './src/index.html',
-            filename: 'pages/index.html'
+            filename: './index.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
             chunks: ['about'],
             template: './src/about.html',
-            filename: 'pages/about.html'
+            filename: './about.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
             chunks: ['analytics'],
             template: './src/analytics.html',
-            filename: 'pages/analytics.html'
+            filename: './analytics.html'
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
