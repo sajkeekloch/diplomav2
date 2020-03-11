@@ -2,7 +2,7 @@
     background-size: contain;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
-    max-height: 45%;
+    height: 45%;
 }
 
 @media (max-width: 1439px) and (min-width: 1200px) {

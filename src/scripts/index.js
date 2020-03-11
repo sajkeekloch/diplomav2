@@ -1,6 +1,6 @@
 import '../styles/index.css';
 import {
-  numberOfWeek, period, searchButton, input, container, moreButton,
+   period, searchButton, container, moreButton, input,
 } from './constants/constants';
 import { loader } from './utils/loader';
 import NewCardList from './modules/NewCard';
@@ -13,9 +13,8 @@ const more = new MoreButton(moreButton);
 const api = new NewsApi('everything', period, 'relevancy', 100);
 const newCard = new NewCardList();
 
-
 searchButton.addEventListener('click', () => {
-  search.click();
+    search.click();
 });
 
 moreButton.addEventListener('click', () => {
@@ -26,5 +25,6 @@ if (sessionStorage.getItem('n')) {
   newCard.createCard(container);
   loader.showResults();
 }
+
 
 export { newCard, api };

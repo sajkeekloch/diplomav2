@@ -30,9 +30,11 @@ class NewCardList {
       cardDate.classList.add('card__date');
 
       const cardTittle = document.createElement('h3');
+      card.setAttribute('overflow', 'hidden');
       cardTittle.classList.add('card__title');
 
       const cardText = document.createElement('p');
+      card.setAttribute('overflow', 'hidden');
       cardText.classList.add('card__text');
 
       const cardSource = document.createElement('span');

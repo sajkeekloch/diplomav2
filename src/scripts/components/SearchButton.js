@@ -1,7 +1,7 @@
 import {loader} from '../utils/loader';
 import {newCard, api} from '../index';
 import {counter} from '../utils/counter';
-import {container, input} from '../constants/constants';
+import {container, input, searchButton} from '../constants/constants';
 
 class SearchButton {
     click() {
