@@ -9,12 +9,7 @@
 
 .diagram__ray {
     background-color: #2F71E5;
-    /* width: calc(100% - 6px); */
     height: 24px;
     margin-bottom: 56px;
     display: flex;
 }
-/* 
-.diagram__ray:last-child{
-    margin-bottom: 0px;
-} */

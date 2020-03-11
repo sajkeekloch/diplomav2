@@ -1,5 +1,6 @@
 import '../styles/about.css';
 
+
 import './swiper.js';
 
 

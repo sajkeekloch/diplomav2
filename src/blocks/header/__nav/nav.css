@@ -6,4 +6,14 @@
     display: flex;
     flex-direction: row;
     justify-self: flex-end;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    list-style-type: none;
+} 
+
+@media (min-width: 1560px) {
+    .header__nav { 
+        max-width: calc(88px + 40px + 75px);
+    }
 }

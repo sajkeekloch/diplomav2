@@ -6,13 +6,20 @@
     background: url(../../images/searchBG.png);
     background-size: cover;
     background-position: bottom;
-    z-index: -1;
+    z-index: -10;
     height: 40vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-top: -88px;
 } 
+
+@media (min-width: 1560px) {
+    .search { 
+        margin-top: -100px;
+        height: 46vw;
+    }
+}
 
 @media (max-width: 1439px) and (min-width: 1200px) {
     .search { 

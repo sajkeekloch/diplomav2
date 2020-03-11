@@ -14,22 +14,22 @@ module.exports = {
         },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js'
+        filename: 'scripts/[name].[chunkhash].js'
     },
     module: {
         rules: [
-            { // тут описываются правила
-                test: /\.js$/, // регулярное выражение, которое ищет все js файлы
-                use: { loader: "babel-loader" }, // весь JS обрабатывается пакетом babel-loader
-                exclude: /node_modules/ // исключает папку node_modules
+            { 
+                test: /\.js$/, 
+                use: { loader: "babel-loader" }, 
+                exclude: /node_modules/ 
             },
             {
-                test: /\.(woff|woff2|ttf|otf|png|jpe?g|gif|svg)$/i,
+                test: /\.(png|jpe?g|gif|svg)$/i,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[name].[ext]'
+                            name: 'images/[name].[ext]',
                         }
                     },
                     {
@@ -41,10 +41,37 @@ module.exports = {
                     }
                 ]
             },
-        {
-            test: /\.css$/, // применять это правило только к CSS-файлам
-            use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader'] // к этим файлам нужно применить пакеты, которые мы уже установили
-        }
+            {
+                test: /\.(woff|woff2|ttf|otf)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'fonts/[name].[ext]',
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true,
+                            disable: true,
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                      loader: MiniCssExtractPlugin.loader,
+                      options: {
+                        publicPath: '../',
+                      },
+                    },
+                    'css-loader',
+                'postcss-loader'] 
+            }
+            
         ]
     },
     resolve: {
@@ -56,27 +83,29 @@ module.exports = {
         overlay: true
     },
     plugins: [
-        new MiniCssExtractPlugin({ filename: 'style.[contenthash].css' }),
+        new MiniCssExtractPlugin({ 
+            filename: 'styles/style.[contenthash].css',
+     }),
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
             chunks: ['main'],
             template: './src/index.html',
-            filename: 'index.html'
+            filename: './index.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
             chunks: ['about'],
             template: './src/about.html',
-            filename: 'about.html'
+            filename: './about.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
             chunks: ['analytics'],
             template: './src/analytics.html',
-            filename: 'analytics.html'
+            filename: './analytics.html'
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
