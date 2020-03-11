@@ -26,5 +26,4 @@ if (sessionStorage.getItem('n')) {
   loader.showResults();
 }
 
-
 export { newCard, api };

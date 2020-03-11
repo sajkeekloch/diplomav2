@@ -31,7 +31,6 @@ class GitApi {
       .then(res => this.recordSessionStorage(res))
       .catch(res => {
         document.getElementById('swiper').style.display = 'none';
-        console.log(res)
       });
   }
 } 
