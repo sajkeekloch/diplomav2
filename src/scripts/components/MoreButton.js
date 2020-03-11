@@ -10,8 +10,6 @@ class MoreButton {
     if (JSON.parse(sessionStorage.getItem('n')) + 2 >= (JSON.parse(sessionStorage.getItem('t')))) {
       moreButton.style.display = 'none';
     }
-    console.log(JSON.parse(sessionStorage.getItem('t')), 't');
-    console.log(JSON.parse(sessionStorage.getItem('n')), 'n');
   }
 }
 
