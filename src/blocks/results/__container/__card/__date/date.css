@@ -4,6 +4,7 @@
     font-size: 18px;
     line-height: 24px;
     color: #B6BCBF;
+    text-transform: uppercase;
 }
 
 @media (max-width: 1439px) and (min-width: 1200px) {

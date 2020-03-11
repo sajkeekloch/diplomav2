@@ -6,6 +6,10 @@
     width: 20%;
 }
 
+.footer__copyright-api {
+    font-size: 9px;
+}
+
 @media (max-width: 1439px) and (min-width: 1200px) {
     .footer__copyright {
         width: 20%;

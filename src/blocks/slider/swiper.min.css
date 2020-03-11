@@ -21,6 +21,7 @@
   
   .swiper-slide {
     height: 264px;
+    width: 400px;
     align-self: center;
     justify-self: center;
     padding-top: 24px;
