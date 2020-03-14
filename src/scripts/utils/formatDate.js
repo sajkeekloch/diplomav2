@@ -1,44 +1,66 @@
-function formatDate(date) {
-    let monthNames = [
-      "Января", "Февраля", "Марта",
-      "Апреля", "Мая", "Июня", "Июля",
-      "Августа", "Сентября", "Октября",
-      "Ноября", "Декабря"
-    ];
-  
-    let day = date.getDate();
-    let monthIndex = date.getMonth();
-  
-    return day + ' ' + monthNames[monthIndex];
-  }
-  
-  function formatDateForRequest(date) {
-    let day = date.getDate();
-    if (day < 10) {
-      day = '0' + day;
+class Counter {
+  add() {
+    if (!(localStorage.getItem('n'))) {
+      localStorage.setItem('n', 3);
+    } else {
+      localStorage.setItem('n', parseInt(localStorage.getItem('n')) + 3);
     }
-    let mounth = date.getMonth() + 1;
-    if (mounth < 10) {
-      mounth = '0' + mounth;
-    }
-    let year = date.getFullYear();
-
-    return year + '-' + mounth + '-' + day;
   }
 
-  
+  setTotal(t) {
+    localStorage.setItem('t', t);
+  }
 
-  function formatDateDayOfWeek(date) {
-    let days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
-  
-    return days[date.getDay()];
+  reset() {
+    localStorage.setItem('n', 0);
+  }
 }
 
-  function formatDateForRay(date) {
-    let day = date.getDate();
+export default Counter;
 
-    return day;
+function formatDate(date) {
+  const monthNames = [
+    'Января', 'Февраля', 'Марта',
+    'Апреля', 'Мая', 'Июня', 'Июля',
+    'Августа', 'Сентября', 'Октября',
+    'Ноября', 'Декабря',
+  ];
+
+  const day = date.getDate();
+  const monthIndex = date.getMonth();
+
+  return `${day} ${monthNames[monthIndex]}`;
+}
+
+function formatDateForRequest(date) {
+  let day = date.getDate();
+  if (day < 10) {
+    day = `0${day}`;
   }
-  
-  export {formatDate, formatDateForRequest, formatDateDayOfWeek, formatDateForRay};
+  let mounth = date.getMonth() + 1;
+  if (mounth < 10) {
+    mounth = `0${mounth}`;
+  }
+  const year = date.getFullYear();
 
+  return `${year}-${mounth}-${day}`;
+}
+
+function formatDateDayOfWeek(date) {
+  const days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+
+  return days[date.getDay()];
+}
+
+function formatDateForRay(date) {
+  const day = date.getDate();
+
+  return day;
+}
+
+export {
+  formatDate,
+  formatDateForRequest,
+  formatDateDayOfWeek,
+  formatDateForRay,
+};

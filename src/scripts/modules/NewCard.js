@@ -1,21 +1,23 @@
-import { formatDate } from '../utils/formatDate';
+import {
+  formatDate,
+} from '../utils/formatDate';
 
-class NewCardList {
+class NewCards {
   constructor(container) {
     this.container = container;
   }
 
   showCard(card, cardDate, imgCard, cardTittle, cardText, cardSource, i) {
-    cardText.textContent = JSON.parse(sessionStorage.getItem(`item${i}`)).description;
-    card.setAttribute('href', JSON.parse(sessionStorage.getItem(`item${i}`)).url);
-    cardSource.textContent = JSON.parse(sessionStorage.getItem(`item${i}`)).source.name;
-    cardTittle.textContent = JSON.parse(sessionStorage.getItem(`item${i}`)).title;
-    cardDate.textContent = formatDate(new Date(JSON.parse(sessionStorage.getItem(`item${i}`)).publishedAt));
-    imgCard.setAttribute('src', JSON.parse(sessionStorage.getItem(`item${i}`)).urlToImage);
+    cardText.textContent = JSON.parse(localStorage.getItem(`item${i}`)).description;
+    card.setAttribute('href', JSON.parse(localStorage.getItem(`item${i}`)).url);
+    cardSource.textContent = JSON.parse(localStorage.getItem(`item${i}`)).source.name;
+    cardTittle.textContent = JSON.parse(localStorage.getItem(`item${i}`)).title;
+    cardDate.textContent = formatDate(new Date(JSON.parse(localStorage.getItem(`item${i}`)).publishedAt));
+    imgCard.setAttribute('src', JSON.parse(localStorage.getItem(`item${i}`)).urlToImage);
   }
 
   createCard(container) {
-    const n = sessionStorage.getItem('n');
+    const n = localStorage.getItem('n');
     for (let i = 0; i < n; i++) {
       const card = document.createElement('a');
       card.classList.add('results__card');
@@ -60,4 +62,4 @@ class NewCardList {
   }
 }
 
-export default NewCardList;
+export default NewCards;

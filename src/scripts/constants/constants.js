@@ -1,4 +1,8 @@
-import { formatDateDayOfWeek, formatDateForRequest } from '../utils/formatDate';
+import {
+  formatDateDayOfWeek,
+  formatDateForRequest,
+} from '../utils/formatDate';
+
 const containerGit = document.getElementById('container');
 const searchButton = document.querySelector('.search__button');
 const moreButton = document.querySelector('.results__button');
@@ -20,5 +24,13 @@ for (let i = 0; i < 7; i++) {
 }
 
 export {
-  searchButton, moreButton, input, container, n, numberOfWeek, dayOfWeek, period, containerGit,
+  searchButton,
+  moreButton,
+  input,
+  container,
+  n,
+  numberOfWeek,
+  dayOfWeek,
+  period,
+  containerGit,
 };
