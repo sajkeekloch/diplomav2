@@ -1,11 +1,10 @@
-import '../swiper';
+// import '../swiper';
 import GitCards from './GitCards';
 import {
   containerGit,
 } from '../constants/constants';
 
 document.getElementById('swiper').style.display = 'none';
-const gitCards = new GitCards();
 
 class GitApi {
   constructor() {
@@ -22,7 +21,6 @@ class GitApi {
     for (let i = 0; i < res.length; i++) {
       localStorage.setItem(`commit${i}`, JSON.stringify(res[i]));
     }
-    gitCards.render(containerGit);
   }
 
   getCommits() {
@@ -30,7 +28,11 @@ class GitApi {
       .then((res) => this._getResponse(res))
       .then((res) => this._recordLocalStorage(res))
       .then(() => {
-        document.getElementById('swiper').style.display = 'block';
+        const gitCards = new GitCards();
+        gitCards.render(containerGit);
+      })
+      .then(() => {
+        document.getElementById('swiper').style.display = 'block';  
       })
       .catch(() => {
         document.getElementById('swiper').style.display = 'none';

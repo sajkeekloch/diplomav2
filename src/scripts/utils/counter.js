@@ -1,3 +1,5 @@
+import { moreButton } from "../constants/constants";
+
 class Counter {
   add() {
     if (!(localStorage.getItem('n'))) {
@@ -13,6 +15,14 @@ class Counter {
 
   reset() {
     localStorage.setItem('n', 0);
+  }
+
+  check() {
+    if (localStorage.getItem('n') >= localStorage.getItem('t')) {
+      return 'inline-block';
+    }
+    else 
+      return 'none';
   }
 }
 

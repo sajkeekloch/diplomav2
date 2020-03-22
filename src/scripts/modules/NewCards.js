@@ -16,7 +16,7 @@ class NewCards {
     imgCard.setAttribute('src', JSON.parse(localStorage.getItem(`item${i}`)).urlToImage);
   }
 
-  createCard(container) {
+  createCard() {
     const n = localStorage.getItem('n');
     for (let i = 0; i < n; i++) {
       const card = document.createElement('a');
@@ -47,17 +47,15 @@ class NewCards {
       card.appendChild(cardTittle);
       card.appendChild(cardText);
       card.appendChild(cardSource);
-      container.appendChild(card);
-
+      this.container.appendChild(card);
+      
       this.showCard(card, cardDate, imgCard, cardTittle, cardText, cardSource, i);
     }
   }
 
-  removeCards(container) {
-    let child = container.lastElementChild;
-    while (child) {
-      container.removeChild(child);
-      child = container.lastElementChild;
+  removeCards() {
+    while (this.container.lastElementChild) { 
+      this.container.removeChild(this.container.lastElementChild);
     }
   }
 }

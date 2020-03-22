@@ -1,18 +1,17 @@
 import {
   period,
   container,
+  input,
 } from '../constants/constants';
-import Counter from '../utils/Counter';
 import {
   loader,
 } from '../utils/loader';
 import {
-  newCard,
+  newCard, search,
 } from '../index';
+import LocalStorageRecorder from './LocalStorageRecorder';
 import DataRecorder from './AnalyticsDataRecorder';
 
-const newsCounter = new Counter();
-const recorder = new DataRecorder();
 
 class NewsApi {
   constructor(topHeadlines, period, sort, pageSize) {
@@ -28,20 +27,7 @@ class NewsApi {
     if (res.ok) {
       return res.json();
     }
-
     return Promise.reject();
-  }
-
-  _redcordLocalStorage(res) {
-    if (res.length === 0) {
-      return Promise.reject();
-    }
-
-    for (let i = 0; i < res.length; i++) {
-      localStorage.setItem(`item${i}`, JSON.stringify(res[i]));
-    }
-    newsCounter.add();
-    newsCounter.setTotal(res.length);
   }
 
   getNews(word) {
@@ -55,24 +41,33 @@ class NewsApi {
     })
       .then((res) => this._getResponse(res))
       .then((res) => {
-        recorder.record(res);
+        if (res.articles.length === 0) {
+          return Promise.reject();
+        }
+        const localStorageRecorder = new LocalStorageRecorder(res.articles);
+        localStorageRecorder.redcordLocalStorage()
         return res;
       })
-      .then((res) => this._redcordLocalStorage(res.articles))
+      .then((res) => {
+        const recorder = new DataRecorder(res);
+        recorder.record();
+      })
+      .then(() => {
+        newCard.createCard();
+      })
       .then(() => {
         loader.showResults();
       })
       .then(() => {
-        newCard.createCard(container);
+        search.enabled();
+        input.removeAttribute('disabled');
       })
       .catch(() => {
+        search.enabled();
+        input.removeAttribute('disabled');
         loader.notFound();
       });
   }
 }
 
-
-export {
-  newsCounter,
-};
 export default NewsApi;

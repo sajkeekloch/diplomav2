@@ -3,21 +3,28 @@ import {
 } from '../index';
 import {
   newsCounter,
-} from '../modules/NewsApi';
+} from '../modules/LocalStorageRecorder';
 import {
-  container,
   moreButton,
 } from '../constants/constants';
 
 class MoreButton {
-  click() {
-    newCard.removeCards(container);
-    newsCounter.add();
-    newCard.createCard(container);
-    if (JSON.parse(localStorage.getItem('n')) + 2 >= (JSON.parse(localStorage.getItem('t')))) {
-      moreButton.style.display = 'none';
-    }
+
+  constructor(container) {
+    this.container = container;
   }
+
+  click() {
+    newCard.removeCards(this.container);
+    newsCounter.add();
+    newCard.createCard(this.container);
+    this.checkStatus()
+    }
+
+    checkStatus() {
+      moreButton.style.display = `${newsCounter.check()}`;
+  }
+
 }
 
 export default MoreButton;

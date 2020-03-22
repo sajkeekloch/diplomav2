@@ -54,22 +54,10 @@ class GitCards {
       card.appendChild(author);
       card.appendChild(text);
       containerGit.appendChild(card);
-
-      const mySwiper = new Swiper('.swiper-container', {
-        pagination: {
-          el: '.swiper-pagination',
-          dynamicBullets: true,
-        },
-        height: 288,
-        width: 400,
-        spaceBetween: 16,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
+      
     }
   }
 }
 
 export default GitCards;
+
