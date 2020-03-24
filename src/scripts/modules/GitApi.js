@@ -1,9 +1,10 @@
-// import '../swiper';
+import { mySwiper } from '../swiper';
 import GitCards from './GitCards';
 import {
   containerGit,
 } from '../constants/constants';
 
+const gitCards = new GitCards();
 document.getElementById('swiper').style.display = 'none';
 
 class GitApi {
@@ -28,11 +29,15 @@ class GitApi {
       .then((res) => this._getResponse(res))
       .then((res) => this._recordLocalStorage(res))
       .then(() => {
-        const gitCards = new GitCards();
         gitCards.render(containerGit);
       })
       .then(() => {
         document.getElementById('swiper').style.display = 'block';  
+      })
+      .then(() => {
+        setTimeout(function () {
+          mySwiper.update();
+         }, 1000);
       })
       .catch(() => {
         document.getElementById('swiper').style.display = 'none';

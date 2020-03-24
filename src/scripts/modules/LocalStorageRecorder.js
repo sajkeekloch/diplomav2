@@ -1,18 +1,14 @@
-
 import Counter from '../utils/Counter';
 const newsCounter = new Counter();
 
 class LocalStorageRecorder {
-    constructor(res) {
-        this.res = res;
-    }
-    
-    redcordLocalStorage() {
-      for (let i = 0; i < this.res.length; i++) {
-        localStorage.setItem(`item${i}`, JSON.stringify(this.res[i]));
+  
+    redcordLocalStorage(res) {
+      for (let i = 0; i < res.length; i++) {
+        localStorage.setItem(`item${i}`, JSON.stringify(res[i]));
       }
       newsCounter.add();
-      newsCounter.setTotal(this.res.length);
+      newsCounter.setTotal(res.length);
     }
 }
 export {

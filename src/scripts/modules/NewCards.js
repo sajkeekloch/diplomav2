@@ -1,7 +1,6 @@
 import {
   formatDate,
 } from '../utils/formatDate';
-import { Object } from 'core-js';
 
 class NewCards {
   constructor(container) {

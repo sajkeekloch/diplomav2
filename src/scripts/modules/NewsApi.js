@@ -12,6 +12,8 @@ import {
 import LocalStorageRecorder from './LocalStorageRecorder';
 import DataRecorder from './AnalyticsDataRecorder';
 
+const localStorageRecorder = new LocalStorageRecorder();
+const recorder = new DataRecorder();
 
 class NewsApi {
   constructor(topHeadlines, period, sort, pageSize) {
@@ -44,13 +46,11 @@ class NewsApi {
         if (res.articles.length === 0) {
           return Promise.reject();
         }
-        const localStorageRecorder = new LocalStorageRecorder(res.articles);
-        localStorageRecorder.redcordLocalStorage()
+        localStorageRecorder.redcordLocalStorage(res.articles)
         return res;
       })
       .then((res) => {
-        const recorder = new DataRecorder(res);
-        recorder.record();
+        recorder.record(res);
       })
       .then(() => {
         newCard.createCard();

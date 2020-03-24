@@ -1,12 +1,9 @@
 import { search } from '../index';
 
 class Validation {
-    constructor(word) {
-        this.word = word;
-    }
 
-    check() {
-        if (this.word.length === 0) {
+    check(word) {
+        if (word.length === 0 || word.length === 50) {
             search.disabled();
         }
 

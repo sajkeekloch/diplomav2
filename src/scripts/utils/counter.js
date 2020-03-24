@@ -1,5 +1,3 @@
-import { moreButton } from "../constants/constants";
-
 class Counter {
   add() {
     if (!(localStorage.getItem('n'))) {
