@@ -27,7 +27,7 @@ input.addEventListener('input', function(){
 
 searchButton.addEventListener('click', () => {
   search.disabled();
-  input.setAttribute('disabled', true);
+  input.setAttribute('disabled', 'true');
   input.style.backgroundColor = '#fff';
   search.click();
 });

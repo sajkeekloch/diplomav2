@@ -1,6 +1,7 @@
 import {
   formatDate,
 } from '../utils/formatDate';
+import { Object } from 'core-js';
 
 class NewCards {
   constructor(container) {
@@ -18,7 +19,7 @@ class NewCards {
 
   createCard() {
     const n = localStorage.getItem('n');
-    for (let i = 0; i < n; i++) {
+    for (let i = n - 3; i < n; i++) {
       const card = document.createElement('a');
       card.classList.add('results__card');
       card.classList.add('link');
@@ -47,15 +48,16 @@ class NewCards {
       card.appendChild(cardTittle);
       card.appendChild(cardText);
       card.appendChild(cardSource);
-      this.container.appendChild(card);
       
       this.showCard(card, cardDate, imgCard, cardTittle, cardText, cardSource, i);
+
+      this.container.appendChild(card);
     }
   }
 
   removeCards() {
-    while (this.container.lastElementChild) { 
-      this.container.removeChild(this.container.lastElementChild);
+    while (this.container.hasChildNodes()) {
+      this.container.removeChild(this.container.childNodes[0]);
     }
   }
 }

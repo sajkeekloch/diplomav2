@@ -15,7 +15,6 @@ class MoreButton {
   }
 
   click() {
-    newCard.removeCards(this.container);
     newsCounter.add();
     newCard.createCard(this.container);
     this.checkStatus()
