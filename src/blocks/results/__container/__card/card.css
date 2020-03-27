@@ -12,6 +12,7 @@
     flex-direction: column;
     margin-bottom: 16px;
     border-radius: 15px;
+    overflow: hidden;
 }
 
 .results__card:hover {

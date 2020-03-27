@@ -16,11 +16,12 @@
   .swiper {
     background: #F5F6F7;
     padding-top: 72px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
   }
   
   .swiper-slide {
     height: 264px;
+    width: 400px;
     align-self: center;
     justify-self: center;
     padding-top: 24px;

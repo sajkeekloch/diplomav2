@@ -6,6 +6,10 @@
     width: 20%;
 }
 
+.footer__copyright_api {
+    font-size: 9px;
+}
+
 @media (max-width: 1439px) and (min-width: 1200px) {
     .footer__copyright {
         width: 20%;
@@ -18,8 +22,9 @@
     }
 }
 
-@media (max-width: 759px) and (min-width: 650px) {
+@media (max-width: 767px) and (min-width: 650px) {
     .footer__copyright {
+        transform: scale(0.7);
         width: 30%;
     }
 }
