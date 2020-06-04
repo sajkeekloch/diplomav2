@@ -8,17 +8,17 @@
   <meta name="author" content="Klochkov Aleksandr">
   <title>analytics</title>
   <link rel="icon" href="images/favicon.png">
-  <link rel="stylesheet" href="styles/style.47144d02b48bae7cc080.css?a038c95bc18f6d75e05c">
+  <link rel="stylesheet" href="styles/style.728d8af6b35f9981092d.css?4a8cdddd845de7da83c3">
 </head>
 <body class="body">
     <header class="header">
-      <div class="header__logo header__logo_aboutPage">NewsAnalyzer</div>
+      <div class="header__logo header__logo-aboutPage">NewsAnalyzer</div>
       <ul class="header__nav">
         <li>
-          <a class="header__main header__main_analyticsPage link" href="./index.html">Главная</a>
+          <a class="header__main header__main-analyticsPage link" href="./index.html">Главная</a>
         </li>
         <li>
-          <a class="header__about header__about_analyticsPage link" href="./about.html">О проекте</a>
+          <a class="header__about header__about-analyticsPage link" href="./about.html">О проекте</a>
         </li>
       </ul>
   </header>
@@ -28,13 +28,17 @@
       Главная / Аналитика
     </div>
     <h2 class="request__name">
-      Вы спросили: «Путешествия»
+      Вы спросили: <span class="request__value">
+        <a href="./index.html">
+          спроси тут
+        </a>
+      </span>
     </h2>
     <div class="request__metrics">
-      Новостей за неделю: <span class="metrics__number">34 324</span>
+      Новостей за неделю: <span id="week" class="metrics__number">блаблабла</span>
     </div>
     <div class="request__metrics">
-      Упоминаний в загаловках: <span class="metrics__number">235</span>
+      Упоминаний в загаловках: <span id="titles" class="metrics__number">лалала </span>
     </div>
   </div>
 
@@ -45,7 +49,7 @@
     <div class="diagram__container">
       <div class="diagram__specs">
         <div class="diagram__baseDate">
-          Дата (август)
+          Дата (март)
         </div>
         <div class="diagram__measure">
           количество упоминаний
@@ -69,51 +73,9 @@
         </div>
       </div>
       <div class="diagram__main">
-        <div class="diagram__dates">
-          <div class="diagram__date">19, пн</div> 
-          <div class="diagram__date">20, вт</div>
-          <div class="diagram__date">21, ср</div>
-          <div class="diagram__date">22, чт</div>
-          <div class="diagram__date">23, пт</div>
-          <div class="diagram__date">24, сб</div>
-          <div class="diagram__date">25, вс</div>
+        <div class="diagram__dates">  
         </div>
         <div class="diagram__rays">
-          <div class="diagram__ray diagram__ray_monday">
-            <div class="diagram__percent">
-              15
-            </div>
-          </div>
-          <div class="diagram__ray diagram__ray_tuesday">
-            <div class="diagram__percent">
-              18
-            </div>
-          </div>
-          <div class="diagram__ray diagram__ray_wensday">
-            <div class="diagram__percent">
-              11
-            </div>
-          </div>
-          <div class="diagram__ray diagram__ray_thursday">
-            <div class="diagram__percent">
-              39
-            </div>
-          </div>
-          <div class="diagram__ray diagram__ray_friday">
-            <div class="diagram__percent">
-              45
-            </div>
-          </div>
-          <div class="diagram__ray diagram__ray_saturday">
-            <div class="diagram__percent">
-              73
-            </div>
-          </div>
-          <div class="diagram__ray diagram__ray_sunday">
-            <div class="diagram__percent">
-              34
-            </div>
-          </div>
         </div>
       </div>
       <div class="diagram__quarters diagram__quarters_bottom">
@@ -136,28 +98,34 @@
       <div class="diagram__numbers diagram__numbers"></div>
     </div>
   </div>
+
   <div class="footer">
-    <div class="footer__copyright">© 2019  Supersite</div>
+    <div class="footer__copyright">© 2019  Supersite
+      <div class="footer__copyright footer__copyright_api">
+      powered&nbsp;by&nbsp;NewsApi.org
+    </div>
+  </div>
     <ul class="footer__link">
       <li>
-        <a href="./index.html" class="footer__link_main link">Главная</a>
+        <a href="./index.html" class="link">Главная</a>
       </li>
       <li>
-        <a href="about.html" class="footer__link_about link">О проекте</a>
+        <a href="about.html" class="link">О проекте</a>
       </li>
       <li>
-        <a href="https://praktikum.yandex.ru/" class="footer__link_yandex link">Яндекс.Практикум</a>
+        <a href="https://praktikum.yandex.ru/" class="link" target="_blank">Яндекс.Практикум</a>
       </li>
     </ul>
     <div class="footer__icon">
-      <a class="footer__icon_git" href="https://github.com/sajkeekloch">
+      <a class="footer__icon footer__icon_git" href="https://github.com/sajkeekloch">
         <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9998 0.894531C5.41678 0.894531 0.894531 5.42298 0.894531 10.9998C0.894531 15.4662 3.7915 19.2503 7.80507 20.5902C8.30754 20.6832 8.49364 20.3731 8.49364 20.1001C8.49364 19.8582 8.48744 19.2254 8.48123 18.3818C5.67111 18.9897 5.07559 17.0295 5.07559 17.0295C4.61654 15.8632 3.95278 15.5531 3.95278 15.5531C3.03469 14.9265 4.02102 14.9389 4.02102 14.9389C5.03217 15.0134 5.57186 15.9811 5.57186 15.9811C6.47135 17.5257 7.93534 17.0791 8.51225 16.8185C8.6053 16.1672 8.86584 15.7205 9.15119 15.4662C6.90558 15.2119 4.54831 14.3434 4.54831 10.4725C4.54831 9.36831 4.93912 8.46883 5.59047 7.76164C5.48501 7.50731 5.13762 6.47755 5.68972 5.088C5.68972 5.088 6.53958 4.81505 8.46882 6.12396C9.27526 5.90064 10.1375 5.78898 10.9998 5.78277C11.8559 5.78898 12.7243 5.90064 13.5308 6.12396C15.46 4.81505 16.3099 5.088 16.3099 5.088C16.862 6.47755 16.5146 7.50731 16.4091 7.76164C17.0543 8.46883 17.4451 9.36831 17.4451 10.4725C17.4451 14.3558 15.0816 15.2057 12.8298 15.46C13.1896 15.7702 13.5184 16.3905 13.5184 17.3334C13.5184 18.6857 13.5059 19.7713 13.5059 20.1063C13.5059 20.3793 13.6858 20.6894 14.2007 20.5902C18.2143 19.2503 21.1051 15.4662 21.1051 11.006C21.1051 5.42298 16.5828 0.894531 10.9998 0.894531Z" fill="#191717"/>
           </svg>
       </a>
-      <a class="footer__icon_social" href=""></a>
     </div>
   </div>
-  <script src="scripts/analytics.7e1f2c9015246d31ffc1.js?a038c95bc18f6d75e05c"></script>
+
+  <script src="scripts/analytics.945ef08bf750d059df44.js?4a8cdddd845de7da83c3"></script>
+
 </body>
 </html>
