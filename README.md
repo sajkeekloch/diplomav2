@@ -1,4 +1,4 @@
-# [Diploma](https://sajkeekloch.github.io/diplomav2/)
+# [Diploma](https://sajkeekloch.github.io/diplomav2/index.html)
 
 ## Описание
 
